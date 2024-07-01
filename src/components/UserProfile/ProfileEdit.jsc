@@ -1,0 +1,68 @@
+import React, { useState } from 'react';
+
+function UserProfile({ user, profileData }) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedProfileData, setEditedProfileData] = useState({ bio: profileData ? profileData.bio : '' });
+
+  const handleEditButtonClick = () => {
+    setIsEditing(true);
+  };
+
+  const handleSaveButtonClick = () => {
+    // Save edited profile data
+    // For example, you can send an API request to update the profile
+    console.log("Save button clicked, edited profile data:", editedProfileData);
+    setIsEditing(false);
+  };
+
+  const handleCancelButtonClick = () => {
+    // Cancel editing and revert changes
+    setEditedProfileData({ bio: profileData ? profileData.bio : '' });
+    setIsEditing(false);
+  };
+
+  const handleBioChange = (event) => {
+    setEditedProfileData({ bio: event.target.value });
+  };
+
+  return (
+    <div>
+      <div className="flex items-center">
+        <div className="flex-shrink-0">
+          <img className="h-12 w-12 rounded-full" src={user.photoURL} alt="Profile" />
+        </div>
+        <div className="ml-4">
+          <div className="text-xl font-semibold">{user.displayName}</div>
+          <div className="text-sm text-gray-600">{user.email}</div>
+        </div>
+      </div>
+
+      {isEditing ? (
+        <div className="mt-4">
+          <textarea
+            className="w-full border rounded-md p-2"
+            value={editedProfileData.bio}
+            onChange={handleBioChange}
+          />
+          <div className="mt-2">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2" onClick={handleSaveButtonClick}>
+              Save
+            </button>
+            <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" onClick={handleCancelButtonClick}>
+              Cancel
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="mt-4">
+          <p className="text-sm text-gray-700">{profileData ? profileData.bio : ''}</p>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2" onClick={handleEditButtonClick}>
+            Edit Profile
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default UserProfile;

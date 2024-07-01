@@ -1,0 +1,224 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the body */
+  /* body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, sans-serif;
+  } */
+  
+  /* Header styles */
+  header {
+    width: 100%;
+    padding: 1.5vw 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid white; */
+    background-color: black;
+
+  }
+  
+  /* Menu overlay styles */
+  .menu-hide {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: red;
+    transition: all 0.2s;
+  }
+  
+  .show-ani {
+    width: 30vw;
+    height: 100vh;
+    position: fixed;
+    border-radius: 0;
+    box-shadow: 0px 0px 300px red;
+    border-right: 2px solid black;
+
+    /* position: relative; */
+    z-index: 99;
+  }
+  
+  /* Button styles */
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.3s, border-radius 0.3s;
+    
+    background-color: rgba(255, 65, 65, 0);
+    border: 1px solid rgba(255, 255, 255, 0.377);
+  }
+  
+  .btn .sign {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s, padding-left 0.3s;
+  }
+  
+  .btn .sign svg {
+    width: 17px;
+  }
+  
+  .btn .sign svg path {
+    fill: white;
+  }
+  
+  .btn .text {
+    position: absolute;
+    right: 0;
+    width: 0;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: width 0.3s, opacity 0.3s, padding-right 0.3s;
+  }
+  
+  .btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.452);
+  }
+  
+  .btn:hover .sign {
+    width: 30%;
+    padding-left: 20px;
+  }
+  
+  .btn:hover .text {
+    width: 70%;
+    opacity: 1;
+    padding-right: 10px;
+  }
+  
+  .btn:active {
+    transform: translate(2px, 2px);
+  }
+  
+  /* Menu styles */
+  .menu {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  lord-icon {
+    margin-right: 0.5vw;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1000px) {
+    header {
+      padding: 2vw;
+      /* flex-direction: column; */
+      align-items: flex-start;
+    }
+  
+    .btn {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .btn .text {
+      font-size: 1em;
+    }
+  
+    .menu {
+      font-size: 18px;
+    }
+  
+    .menu-hide.show-ani {
+      width: 80vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .btn {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .btn .text {
+      font-size: 0.9em;
+    }
+  
+    .menu {
+      font-size: 16px;
+    }
+  
+    lord-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+  .close-menu {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 3vw 3vw;
+    /* border: 1px solid black; */
+  }
+  
+
+
+
+
+
+.NevHLink{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.NevHLink a{
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+  padding: 1vw;
+  font-size: 1.6vw;
+  transition: all .3s;
+}
+
+.NevHLink a:hover{
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+

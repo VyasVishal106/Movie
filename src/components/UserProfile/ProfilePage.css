@@ -1,0 +1,200 @@
+Base styles using Tailwind CSS
+
+/* Profile Page */
+.profile-container {
+  min-height: 100vh;
+  background-color: #f3f4f6; /* Light gray */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  max-width: 28rem; /* Adjust as needed */
+  width: 100%;
+  background-color: #ffffff; /* White */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 2rem; /* Padding */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+.profile-title {
+  font-size: 2.5rem; /* Large title */
+  font-weight: 700; /* Bold */
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #1f2937; /* Dark gray */
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-image {
+  width: 10rem; /* Rounded profile image */
+  height: 10rem;
+  border-radius: 50%;
+  border: 4px solid #6366f1; /* Indigo border */
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.profile-details {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.profile-text {
+  font-size: 1.25rem; /* Medium text */
+  color: #4b5563; /* Medium gray */
+}
+
+.additional-details {
+  margin-top: 1.5rem;
+}
+
+.profile-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.profile-button {
+  padding: 0.75rem 1.5rem; /* Medium padding */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: 600; /* Semi-bold */
+  transition: all 0.3s ease;
+}
+
+.share-button {
+  background-color: #6366f1; /* Indigo */
+  color: #ffffff; /* White text */
+}
+
+.share-button:hover {
+  background-color: #4f46e5; /* Darker indigo on hover */
+}
+
+.edit-button {
+  background-color: #ffffff; /* White */
+  color: #000000; /* Black text */
+  border: 1px solid #6366f1; /* Indigo border */
+}
+
+.edit-button:hover {
+  background-color: #f3f4f6; /* Light gray on hover */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s linear;
+}
+
+/* Modal */
+.modal {
+  max-width: 90%; /* Adjust as needed */
+  width: 30rem; /* Adjust as needed */
+  background-color: #ffffff; /* White */
+  padding: 2rem; /* Padding */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease 0.1s;
+}
+
+.modal-title {
+  font-size: 1.875rem; /* Large title */
+  font-weight: 600; /* Semi-bold */
+  margin-bottom: 1rem;
+  color: #1f2937; /* Dark gray */
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Spacing between form fields */
+}
+
+.modal-label {
+  font-size: 1rem; /* Medium text */
+  color: #4b5563; /* Medium gray */
+  margin-bottom: 0.5rem;
+}
+
+.modal-input {
+  padding: 0.75rem; /* Medium padding */
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-size: 1rem; /* Medium text */
+  transition: border-color 0.2s ease;
+}
+
+.modal-input:focus {
+  outline: none;
+  border-color: #6366f1; /* Indigo focus border */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem; /* Spacing between buttons */
+  margin-top: 1.5rem;
+}
+
+.modal-button {
+  padding: 0.75rem 1.5rem; /* Medium padding */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: 600; /* Semi-bold */
+  transition: all 0.3s ease;
+}
+
+.cancel-button {
+  background-color: #6b7280; /* Gray */
+  color: #ffffff; /* White text */
+}
+
+.cancel-button:hover {
+  background-color: #4b5563; /* Darker gray on hover */
+}
+
+.save-button {
+  background-color: #3b82f6; /* Blue */
+  color: #ffffff; /* White text */
+}
+
+.save-button:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}

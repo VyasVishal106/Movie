@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+::selection{
+    background-color: red;
+}
+
+*{
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* color: #333; */
+
+    scrollbar-width: none;  
+}

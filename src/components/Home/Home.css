@@ -1,0 +1,432 @@
+/* Base styles */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap');
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+/* .container { */
+  .containerHomeMain {
+
+
+  /* background: url('bgMovie.jpg'); */
+  background-image: url('../../assets/bgMovie.jpg');                               
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+}
+
+.header {
+  background-color: #1a1a1a;
+  color: white;
+  width: 100%;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 3rem 1rem;
+  /* background-image: url('bgMovie.jpg');                                */
+
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: slideIn 1s ease-out;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  color: #b3b3b3;
+  font-size: 1.25rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.feature-card {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0px 8px rgba(255, 255, 255, 0.1);
+  /* border: 1px solid rgb(255, 255, 255); */
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.card1 {
+  animation-name: fadeInLeft;
+}
+
+.card2 {
+  animation-name: fadeInUp;
+}
+
+.card3 {
+  animation-name: fadeInRight;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #b3b3b3;
+  font-size: 1rem;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.cta {
+  text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;;
+}
+
+.cta h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.join-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.join-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 3.5rem;
+  }
+
+  .intro h2 {
+    font-size: 2.5rem;
+  }
+
+  .intro p {
+    font-size: 1.5rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature-card h3 {
+    font-size: 1.75rem;
+  }
+
+  .feature-card p {
+    font-size: 1.25rem;
+  }
+
+  .cta h3 {
+    font-size: 2rem;
+  }
+
+  .join-button {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .features {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .header h1 {
+    font-size: 4.5rem;
+  }
+
+  .intro h2 {
+    font-size: 3rem;
+  }
+
+  .intro p {
+    font-size: 1.75rem;
+  }
+
+  .feature-card h3 {
+    font-size: 2rem;
+  }
+
+  .feature-card p {
+    font-size: 1.5rem;
+  }
+
+  .cta h3 {
+    font-size: 2.5rem;
+  }
+
+  .join-button {
+    font-size: 1.75rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button {
+  /* height: 50px; */
+  /* width: 200px; */
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #ffffff25;
+  overflow: hidden;
+  /* border-radius: 30px; */
+  color: #333;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cssbuttons-io-button {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.5em -0.6em #000000;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+}
+
+.cssbuttons-io-button .icon {
+  background: rgb(0, 0, 0);
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  /* box-shadow: 0.1em 0.1em 0.6em 0.2em #000000; */
+  right: 0.3em;
+  transition: all 0.3s;
+} 
+
+.cssbuttons-io-button:hover {
+  background-color: #000000;
+}
+
+
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100%);
+  height: 100%;
+  padding: 0;
+  /* border-radius: 0; */
+  right: 0;
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #ffffff;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+  font-size: 3vw;
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
